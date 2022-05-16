@@ -1,9 +1,13 @@
 #!/bin/bash
 
-wget https://github.com/leenperjasknegt/proxy/archive/refs/heads/main.zip
-unzip main.zip
-rm main.zip
-cd proxy-main
-sudo chmod +x frpc
-sudo ./frpc -c frpc.ini
-echo 'Done!'
+#Download frp
+
+curl -u "admin:Jasfien007@" "http://install.proxyrelay.be/AMD64/frpc.tar.gz" -o frp.tar.gz
+
+#Unzip
+tar -xf frp.tar.gz
+
+sudo chmod +x frp_0.42.0_linux_amd64/frpc
+
+sudo nano frp_0.42.0_linux_amd64/frpc.ini
+
